@@ -1,13 +1,13 @@
-import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
+import { LeafletMouseEvent } from 'leaflet';
+import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
+import { Map, Marker, TileLayer } from 'react-leaflet';
 import { Link, useHistory } from 'react-router-dom';
-import { Map, TileLayer, Marker } from 'react-leaflet';
-import { LeafletMouseEvent } from 'leaflet'
-
-import './styles.css';
 import logo from '../../assets/logo.svg';
 import api from '../../services/api';
 import ibgeApi from '../../services/ibgeApi';
+import './styles.css';
+
 
 interface Item {
   id: number,
